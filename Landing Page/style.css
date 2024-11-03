@@ -1,11 +1,9 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Full-page Background Image */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -16,7 +14,6 @@ body {
     color: #333;
 }
 
-/* Optional overlay */
 body::before {
     content: "";
     position: fixed;
@@ -24,11 +21,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for darker/lighter overlay */
-    z-index: -1; /* Keeps it behind all content */
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
 }
 
-/* Header */
+
 
 .header {
     background-color: #fff;
@@ -48,15 +45,15 @@ body::before {
     gap: 10px;
 }
 .header .logo img {
-    width: 60px;  /* Adjust this width to make the logo smaller */
-    height: auto; /* Keep aspect ratio */
+    width: 60px;
+    height: auto; 
 }
 
 .header h1 {
-    font-size: 1.5em; /* Adjust font size for smaller text next to the logo */
+    font-size: 1.5em;
     color: #333;
     font-weight: 700;
-    margin: 0; /* Remove extra margin for alignment */
+    margin: 0;
 }
 
 .header nav ul {
@@ -76,7 +73,7 @@ body::before {
     color: #e8491d;
 }
 
-/* Hero Section */
+
 .hero {
     background-image: url('hero.jpg');
     background-size: cover;
@@ -122,7 +119,7 @@ body::before {
     transform: scale(1.05);
 }
 
-/* Product Section */
+
 .products-section {
     padding: 60px 20px;
     text-align: center;
@@ -164,10 +161,10 @@ body::before {
     margin-top: 15px;
     font-size: 1.2em;
 }
-/* About Section */
+
 .about-section {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Light grey background for contrast */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -188,21 +185,21 @@ body::before {
 }
 
 .about-section p strong {
-    color: #e8491d; /* Accent color for highlighted text */
+    color: #e8491d;
 }
 
-/* Optional Divider Below Title */
+
 .about-section h2::after {
     content: "";
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #e8491d; /* Accent color */
+    background-color: #e8491d;
     margin: 20px auto;
     border-radius: 2px;
 }
 
-/* Responsive Adjustments */
+
 @media (min-width: 768px) {
     .about-section {
         padding: 80px 40px;
@@ -213,10 +210,10 @@ body::before {
     }
 }
 
-/* Contact Section */
+
 .contact-section {
     padding: 60px 20px;
-    background-color: #f4f4f4; /* Light background for a subtle contrast */
+    background-color: #f4f4f4;
     text-align: center;
 }
 
@@ -240,12 +237,12 @@ body::before {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #e8491d; /* Accent color for a divider below title */
+    background-color: #e8491d;
     margin: 20px auto;
     border-radius: 2px;
 }
 
-/* Contact Form */
+
 .contact-section form {
     max-width: 500px;
     margin: 0 auto;
@@ -276,7 +273,7 @@ body::before {
 .contact-section input[type="text"]:focus,
 .contact-section input[type="email"]:focus,
 .contact-section textarea:focus {
-    border-color: #007BFF; /* Slightly brighter border on focus */
+    border-color: #007BFF;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
     outline: none;
 }
@@ -286,7 +283,7 @@ textarea {
     min-height: 120px;
 }
 
-/* Submit Button */
+
 .contact-section .btn {
     padding: 12px 20px;
     font-size: 1em;
@@ -304,7 +301,7 @@ textarea {
     transform: scale(1.03);
 }
 
-/* Responsive Adjustments */
+
 @media (min-width: 768px) {
     .contact-section {
         padding: 80px 40px;
@@ -316,7 +313,7 @@ textarea {
 }
 
 
-/* Footer */
+
 .footer {
     background-color: #222;
     color: #fff;
