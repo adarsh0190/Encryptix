@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f;
+            color: #f1f1f1;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #f3f3f3;
+        }
+
+        /* Image Styling */
+        .thumbnail img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Summary Section */
+        .summary {
+            background-color: #292941;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .summary h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .summary p {
+            font-size: 1rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background-color: #38385b;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .stats-section h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .stats-table th,
+        .stats-table td {
+            padding: 12px;
+            text-align: center;
+            color: #f1f1f1;
+        }
+
+        .stats-table th {
+            background-color: #444466;
+            font-weight: bold;
+        }
+
+        .stats-table tr:nth-child(even) {
+            background-color: #292941;
+        }
+
+        /* Quotes Section */
+        .quotes-section {
+            background-color: #38385b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .quotes-section h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #d1d1e0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #ffd700;
+            border-radius: 8px;
+        }
+
+        cite {
+            display: block;
+            font-style: italic;
+            color: #bfbfff;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #555;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mahendra Singh Dhoni</h1>
+            <h2>From ticket collector to trophy collector</h2>
+        </div>
+        
+        <div class="thumbnail">
+            <img src="https://i.pinimg.com/736x/ed/e8/cd/ede8cd86a81a756135561c24752bf24b.jpg" alt="Mahendra Singh Dhoni">
+            <div class="caption">Mahendra Bahubali Dhoni</div>
+        </div>
+
+        <!-- Career Summary Section -->
+        <div class="summary">
+            <h3>Career Summary</h3>
+            <p>Mahendra Singh Dhoni, fondly known as "Captain Cool," is widely regarded as one of the most successful and inspiring captains in the history of Indian cricket. Hailing from Ranchi, Jharkhand, Dhoni made his international debut in 2004, quickly establishing himself as a powerhouse with his aggressive batting style and exceptional wicket-keeping skills.</p>
+            <p>Under Dhoni's captaincy, India reached the pinnacle of Test cricket rankings in 2009 and achieved numerous historic victories. His finishing abilities in limited-overs cricket are legendary, with his iconic last-ball six in the 2011 World Cup final cementing his legacy. After an illustrious career, he retired from international cricket in 2020 but continues to play in the IPL, where he captains the Chennai Super Kings.</p>
+        </div>
+
+        <!-- Career Stats Section -->
+        <div class="stats-section">
+            <h3>Career Stats</h3>
+            <table class="stats-table">
+                <tr>
+                    <th>Format</th>
+                    <th>Matches</th>
+                    <th>Runs</th>
+                    <th>Average</th>
+                    <th>Strike Rate</th>
+                    <th>Hundreds</th>
+                    <th>Fifties</th>
+                </tr>
+                <tr>
+                    <td>ODI</td>
+                    <td>350</td>
+                    <td>10,773</td>
+                    <td>50.6</td>
+                    <td>87.6</td>
+                    <td>10</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>90</td>
+                    <td>4,876</td>
+                    <td>38.1</td>
+                    <td>59.1</td>
+                    <td>6</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>T20I</td>
+                    <td>98</td>
+                    <td>1,617</td>
+                    <td>37.6</td>
+                    <td>126.1</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Quotes Section -->
+        <div class="quotes-section">
+            <h3>Who said what</h3>
+            <ul>
+                <li>"Dhoni is the best captain I have played under."<cite>- Sachin Tendulkar</cite></li>
+                <li>"I am really lucky to play under the leadership of MSD."<cite>- Michael Hussey</cite></li>
+                <li>"The coolest man in world cricket, MS Dhoni delivers when it most matters."<cite>- Michael Vaughan</cite></li>
+                <li>"I would go to war with Dhoni by my side."<cite>- Gary Kirsten</cite></li>
+                <li>"When I die, the last thing I want to see is the six that Dhoni hit in the 2011 World Cup final."<cite>- Sunil Gavaskar</cite></li>
+                <li>"Dhoni is my Hero. We talk a lot about Sachin Tendulkar & Virender Sehwag, but this boy has as much talent as anyone in the game."<cite>- Kapil Dev</cite></li>
+                <li>"If 15 runs are needed off the last 6 balls, pressure is on the bowler and not on MS Dhoni."<cite>- Ian Bishop</cite></li>
+                <li>"He has evolved as a leader, not just as a cricketer. In my opinion, if you see his records, he is definitely the best captain India ever had."<cite>- Wasim Akram</cite></li>
+            </ul>
+            <hr>
+            <h4 class="text-center">For more Quotes, click <a href="https://www.scoopwhoop.com/sports/dhoni-quotes/#.igprjk79g" target="_blank"><u>here</u></a></h4>
+        </div>
+
+        <footer>
+            <hr>
+            <p>Written and coded by <a href="https://www.linkedin.com/in/adarsh0190/" target="_blank"><u>Adarsh Singh</u></a></p>
+        </footer>
+    </div>
+</body>
+</html>
