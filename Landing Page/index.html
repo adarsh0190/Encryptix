@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
-        <div><h1>TechGear</h1></div>
-        <div class="logo"><img src="Techgear (1).png" alt="logo" style="width:200px;height: 200px;">
-            
+        <div class="logo">
+            <img src="Techgear (1).png" alt="logo">
+            <h1>TechGear</h1>
         </div>
-        
         <nav>
             <ul>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#signin">Sign In</a></li>
+                <li><a href="#wishlist">Wishlist</a></li>
+                <li><a href="#cart">Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Your One-Stop Shop for Computer Accessories</h1>
-            <p>Find the best deals on keyboards, mice, headphones, and more!</p>
+            <h1>Your One-Stop Shop for Premium Computer Accessories</h1>
+            <p>Discover high-quality products with unbeatable deals on keyboards, mice, headphones, and more!</p>
             <a href="#products" class="btn">Shop Now</a>
         </div>
     </section>
@@ -34,13 +37,11 @@
     <section id="products" class="products-section">
         <h2>Popular Accessories</h2>
         <div class="product-grid">
+            <!-- Example product items; repeat as needed -->
             <div class="product">
                 <img src="keyboard.jpg" alt="Keyboard">
                 <h3>Keyboards</h3>
-                <p>Ergonomic and gaming keyboards for all your needs.
-
-
-                </p>
+                <p>Ergonomic and gaming keyboards for all your needs.</p>
             </div>
             <div class="product">
                 <img src="mouse.jpg" alt="Mouse">
@@ -57,24 +58,32 @@
 
     <section id="about" class="about-section">
         <h2>About Us</h2>
-        <p>At <strong>TechGear</strong>, we are dedicated to providing you with the best computer accessories at unbeatable prices. Whether you're a casual user or a hardcore gamer, we've got something for everyone.<br> Founded in 2024 in Vadodara (India), Techgear is an Indian Audio, IT & Gaming Peripherals, Mobile/ Lifestyle Accessories, Power Solutions, Healthcare & Surveillance Solutions brand with a mission to provide products which are Great on design, performance yet so easy on pocket, that every household in the country can afford.<br> TechGear is known for its EQR Mantra (Excellence, Quality and Reliability) throughout its large range of computer peripherals and consumer electronics.
-        </p>
+        <p>At TechGear, we specialize in providing top-notch computer accessories that combine performance, quality, and affordability. Our mission is to enhance your tech experience.</p>
     </section>
 
     <section id="contact" class="contact-section">
-        <h2>Get in Touch</h2>
-        <p>Have questions or need help? Reach out to us via email at support@techgear.com .
-            You can also leave us your email and we will get back to you!
-        </p>
+        <h2>Contact Us</h2>
+        <p>Need assistance? Reach out to our support team or leave us a message below!</p>
         <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+            <button type="submit" class="btn">Submit</button>
         </form>
-        
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 TechGear. All Rights Reserved.</p>
+        <div class="footer-columns">
+            <p>&copy; 2024 TechGear. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#top">Back to Top</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

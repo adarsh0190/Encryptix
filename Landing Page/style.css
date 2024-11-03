@@ -1,105 +1,158 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Full-page Background Image */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wOF8xLWtzaDZtemEzLmpwZw.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
 }
 
-.header {
-    background-color: #333;
-    color: #a93f2d;
-    padding: 20px 20px;
-    text-align: left;
-    width: 100%;
+/* Optional overlay */
+body::before {
+    content: "";
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for darker/lighter overlay */
+    z-index: -1; /* Keeps it behind all content */
+}
+
+/* Header */
+
+.header {
+    background-color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header .logo {
-    font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header .logo img {
+    width: 60px;  /* Adjust this width to make the logo smaller */
+    height: auto; /* Keep aspect ratio */
 }
 
-.header ul {
-    list-style: none;
-    display: flex;
-    
-}
-nav{
-    text-align: right;
-    list-style: none;
-    display: flex;
+.header h1 {
+    font-size: 1.5em; /* Adjust font size for smaller text next to the logo */
+    color: #333;
+    font-weight: 700;
+    margin: 0; /* Remove extra margin for alignment */
 }
 
-.header nav ul li {
-    margin: 0 15px;
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 .header nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
+.header nav ul li a:hover {
+    color: #e8491d;
+}
+
+/* Hero Section */
 .hero {
     background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-text {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
     border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 1em;
 }
 
 .btn {
     background-color: #e8491d;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.btn:hover {
+    background-color: #c7371a;
+    transform: scale(1.05);
+}
+
+/* Product Section */
 .products-section {
-    padding: 50px;
+    padding: 60px 20px;
     text-align: center;
     background-color: #fff;
 }
 
+.products-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
 .product-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .product {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
     text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product img {
@@ -108,42 +161,188 @@ nav{
 }
 
 .product h3 {
-    margin: 15px 0;
+    margin-top: 15px;
+    font-size: 1.2em;
 }
-
-.about-section, .contact-section {
-    padding: 50px;
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light grey background for contrast */
     text-align: center;
-    background-color: #f4f4f4;
 }
 
-input[type="email"] {
+.about-section h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+.about-section p strong {
+    color: #e8491d; /* Accent color for highlighted text */
+}
+
+/* Optional Divider Below Title */
+.about-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e8491d; /* Accent color */
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .about-section {
+        padding: 80px 40px;
+    }
+
+    .about-section p {
+        font-size: 1.2em;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4; /* Light background for a subtle contrast */
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e8491d; /* Accent color for a divider below title */
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Contact Form */
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
     font-size: 16px;
-    border: 2px solid #ddd;
     border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="email"]:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+.contact-section input[type="text"]:focus,
+.contact-section input[type="email"]:focus,
+.contact-section textarea:focus {
+    border-color: #007BFF; /* Slightly brighter border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
     outline: none;
 }
 
-input[type="email"]::placeholder {
-    color: #999;
-    font-style: italic;
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.contact-section .btn {
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: #e8491d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-section .btn:hover {
+    background-color: #c7371a;
+    transform: scale(1.03);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .contact-section {
+        padding: 80px 40px;
+    }
+
+    .contact-section p {
+        font-size: 1.2em;
+    }
 }
 
 
-footer {
-    background-color: #333;
+/* Footer */
+.footer {
+    background-color: #222;
     color: #fff;
+    padding: 30px 20px;
     text-align: center;
-    padding: 20px 0;
+}
+
+.footer .footer-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: #e8491d;
 }
